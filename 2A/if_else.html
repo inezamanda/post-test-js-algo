@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // NOMOR 2 A
+
+        // Mengubah huruf pertama kalimat/kata menjadi kapital
+        String.prototype.toSentenceCase = function() {
+            return this.charAt(0).toUpperCase() + this.slice(1);
+        }
+
+        alert(`Program Menentukan Hari Esok`);
+        let theDay = prompt(`Hari ini hari apa?`);
+        let tomorrow;
+
+        // menggunakan if-else
+        if (theDay.toSentenceCase() === 'Senin') {
+            tomorrow = 'Selasa';
+        } else if(theDay.toSentenceCase() === 'Selasa'){
+            tomorrow = 'Rabu';
+        } else if(theDay.toSentenceCase() === 'Rabu'){
+            tomorrow = 'Kamis';
+        } else if(theDay.toSentenceCase() === 'Kamis'){
+            tomorrow = 'Jumat';
+        } else if(theDay.toSentenceCase() === 'Jumat'){
+            tomorrow = 'Sabtu';
+        } else if(theDay.toSentenceCase() === 'Sabtu'){
+            tomorrow = 'Minggu';
+        } else if(theDay.toSentenceCase() === 'Minggu'){
+            tomorrow = 'Senin';
+        } else {
+            tomorrow = 'Inputan mu salah. Coba lagi';
+        }
+        
+        alert(tomorrow);
+    </script>
+</body>
+</html>

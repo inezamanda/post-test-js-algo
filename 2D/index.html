@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Program untuk print bilangan prima di interval 0 sampai nomor yg ditentukan
+
+        // memeriksa apakah termasuk bilangan prima dengan kompleksitas O(sqrt(n))
+        function isPrime(bil) {
+            let sqrtnum = Math.floor(Math.sqrt(bil));
+            for(let i=2; i<=sqrtnum; i++)
+                if(bil%i == 0 ) return false;
+            return true;
+        }
+
+        let num = prompt(`Masukkan bilangan`);
+        if (num <= 1) {
+            console.log(`mohon input bilangan lain`);
+        } 
+        else {
+            for (let angka = 2; angka < num; angka++) {
+                if (isPrime(angka)) console.log(angka);
+            }
+        }
+    </script>
+</body>
+</html>

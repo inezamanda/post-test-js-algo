@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // cara 2 : menyimpan bilangan pada array
+        let array = [];
+        function printBilGenap(bil) {
+            for(let i=0; i<=bil; i++){
+                if(i%2 === 0) {
+                    array.push(i);
+                }
+            }
+        }
+        let num = prompt(`Masukkan bilangan`);
+        printBilGenap(num);
+        console.log(array);
+    </script>
+</body>
+</html>
